@@ -9,7 +9,7 @@ public class iceCreamProject {
         double[] prices = {2, 3, 4, 5, 4.5, 8, 6, 7};
         double[] flavorTotalAmounts = new double[8];
         double totalAmount = 0;
-        int cartSerialNumber = 1; // Updated variable name
+        int cartSerialNumber = 1;
 
         boolean stop = false;
         while (!stop) {
@@ -32,8 +32,6 @@ public class iceCreamProject {
                     System.out.println("1. Vanilla\n2. Chocolate\n3. Strawberry");
                     System.out.print("Enter the flavor of ice cream you need: ");
                     String flavor = scanner.next();
-                    System.out.println("Your " + flavor + " ice cream is ready!");
-
                     boolean continueOnline = true;
                     while (continueOnline) {
                         System.out.println("\nAvailable flavors:");
@@ -50,10 +48,10 @@ public class iceCreamProject {
                             flavorTotalAmounts[flavorOnline - 1] += amountOnline;
                             totalAmount += amountOnline;
 
-                            // Print updated cart details
                             System.out.println("\nCart Details:");
                             System.out.println("Serial\t\tFlavor\t\tQuantity\tPrice\t\tTotal Amount");
                             System.out.println("---------------------------------------------------------");
+                            int serial = 1;
                             for (int i = 0; i < quantities.length; i++) {
                                 if (quantities[i] > 0) {
                                     String item;
@@ -87,14 +85,15 @@ public class iceCreamProject {
                                             break;
                                     }
                                     System.out.printf("%d\t\t%s\t\t%d\t\t%.2f\t\t%.2f\n",
-                                            cartSerialNumber, item, quantities[i], prices[i], flavorTotalAmounts[i]);
+                                            serial, item, quantities[i], prices[i], flavorTotalAmounts[i]);
+                                    serial++;
                                 }
                             }
                             System.out.println("---------------------------------------------------------");
                             System.out.println("Total Amount: $" + totalAmount);
 
                             // Increment the cart serial number for the next cart
-                            cartSerialNumber++; // Updated variable name
+                            cartSerialNumber = serial;
                         } else {
                             System.out.println("Invalid flavor number!");
                         }
@@ -122,9 +121,11 @@ public class iceCreamProject {
                         double amountShop = prices[flavorShop - 1] * quantityShop;
                         flavorTotalAmounts[flavorShop - 1] += amountShop;
                         totalAmount += amountShop;
+
                         System.out.println("\nCart Details:");
                         System.out.println("Serial\t\tFlavor\t\tQuantity\tPrice\t\tTotal Amount");
                         System.out.println("---------------------------------------------------------");
+                        int serial = 1;
                         for (int i = 0; i < quantities.length; i++) {
                             if (quantities[i] > 0) {
                                 String item;
@@ -158,14 +159,15 @@ public class iceCreamProject {
                                         break;
                                 }
                                 System.out.printf("%d\t\t%s\t\t%d\t\t%.2f\t\t%.2f\n",
-                                        cartSerialNumber, item, quantities[i], prices[i], flavorTotalAmounts[i]);
+                                        serial, item, quantities[i], prices[i], flavorTotalAmounts[i]);
+                                serial++;
                             }
                         }
                         System.out.println("---------------------------------------------------------");
                         System.out.println("Total Amount: $" + totalAmount);
 
                         // Increment the cart serial number for the next cart
-                        cartSerialNumber++; // Updated variable name
+                        cartSerialNumber = serial;
                     } else {
                         System.out.println("Invalid flavor number!");
                     }
