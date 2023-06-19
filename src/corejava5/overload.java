@@ -1,5 +1,4 @@
 package corejava5;
-
 public class overload {
     int num1=10, num2=20, sum=0;
     void sum() {
