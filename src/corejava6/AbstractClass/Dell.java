@@ -13,7 +13,6 @@ public class Dell extends Laptop {
         System.out.println("2. Dell I5");
         System.out.println("3. HP I7");
     }
-
     @Override
     public void displayItems(int categoryChoice) {
         int index = categoryChoice - 1;

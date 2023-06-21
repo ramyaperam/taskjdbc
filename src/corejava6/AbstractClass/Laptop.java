@@ -1,6 +1,5 @@
 package corejava6.AbstractClass;
 import java.util.Scanner;
-
 public abstract class Laptop {
     public abstract void displayCategories();
 

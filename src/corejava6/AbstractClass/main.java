@@ -14,8 +14,6 @@ public class main {
         System.out.print("Enter your name: ");
         String name = scanner.next();
         System.out.println("Hello, " + name + "! Nice to see you here :");
-
-
             double totalBill = 0;
             double giftCard = 500;
 

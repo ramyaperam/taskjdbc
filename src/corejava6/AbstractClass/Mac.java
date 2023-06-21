@@ -6,14 +6,12 @@ public class Mac extends Laptop {
                 {"$999", "$1299"},
                 {"$1299", "$1499"}
         };
-
         @Override
         public void displayCategories() {
             System.out.println("Categories:");
             System.out.println("1. MacBook Air");
             System.out.println("2. MacBook Pro");
         }
-
         @Override
         public void displayItems(int categoryChoice) {
             int index = categoryChoice - 1;

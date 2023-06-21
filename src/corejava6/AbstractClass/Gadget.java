@@ -1,19 +1,17 @@
 package corejava6.AbstractClass;
-public class OtherGadget {
+public class Gadget {
     private String[] categories = {
-            "Cooling Pad",
-            "HDMI Cable",
-            "USB Cable",
-            "Laptop Cover",
-            "Charger"
+            "Mouse",
+            "Keyboard",
+            "Webcam",
+            "Headset"
     };
 
     private double[] prices = {
-            15.0,
-            10.0,
-            5.0,
-            25.0,
-            20.0
+            20.0,
+            30.0,
+            40.0,
+            50.0
     };
 
     public void displayCategories() {
@@ -22,6 +20,7 @@ public class OtherGadget {
             System.out.println((i + 1) + ". " + categories[i]);
         }
     }
+
     public double getItemPrice(int itemChoice) {
         int index = itemChoice - 1;
 
