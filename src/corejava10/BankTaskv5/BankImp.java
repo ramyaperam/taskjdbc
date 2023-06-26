@@ -1,9 +1,6 @@
 package corejava10.BankTaskv5;
-
 import java.util.Scanner;
-
 public class BankImp implements BankAccount {
-
     private String accountNumber;
     private String name;
     private double balance;

@@ -21,9 +21,7 @@ public class Logic extends ManagerLogin {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Bank");
-
         String choice;
-
         do {
             try {
                 System.out.print("Select login type (1. Manager, 2. User): ");

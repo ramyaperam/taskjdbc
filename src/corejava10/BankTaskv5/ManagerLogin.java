@@ -1,7 +1,5 @@
 package corejava10.BankTaskv5;
-
 import corejava10.InvalidCredentialsException;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

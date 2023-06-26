@@ -8,4 +8,4 @@ public class BankTaskv5Main {
 //                e.printStackTrace();
             }
         }
-    }
+}
